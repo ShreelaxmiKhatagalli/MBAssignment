@@ -12,7 +12,7 @@ The tool also handles semantic variations
 
 # Dependancies
 
-CMake
+CMake (version 3.0 or above)
 
 # Steps to execute
 
