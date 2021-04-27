@@ -1,6 +1,6 @@
 #include <iostream>
 #include <sstream>
-#include "../inc/intentRecognition.h"
+#include "../inc/intentRecognition.hpp"
 
 using namespace std;
 
