@@ -7,6 +7,8 @@ using namespace std;
 string intentrecognition (string InputStr){
     
     string intent;
+    
+    //Find relevant words in the text that help recognize the intent and entities (POS tagging)
   
     int weather = InputStr.find("weather");
     int today = InputStr.find("today");
@@ -23,28 +25,34 @@ string intentrecognition (string InputStr){
     int interesting = InputStr.find("interesting");
     int fact = InputStr.find("fact");
     int nnot = InputStr.find("not");
+    
+    //Based on the obtained words, assign an intent
  
-  if ((what >= 0 || how >= 0 || give >= 0 || tell >= 0) && weather >= 0 )
+    //conditions for "Get weather" intent
+    if ((what >= 0 || how >= 0 || give >= 0 || tell >= 0) && weather >= 0 )                                       
     {
         
         intent = "Get weather";
         
-        if (paris >= 0 || london >= 0 || tokyo >= 0)
+        //conditions for "Get weather city" intent
+        if (paris >= 0 || london >= 0 || tokyo >= 0)                                                                
         {
             intent = "Get weather city";
         }
         InputStr = "";
     }
 
-   else if ((tell >= 0 || say >= 0 || give >= 0 || state >= 0) && interesting >= 0 && fact >= 0 && nnot < 0 )
+    //condiitons for "Get Fact" intent
+    else if ((tell >= 0 || say >= 0 || give >= 0 || state >= 0) && interesting >= 0 && fact >= 0 && nnot < 0 )               
     {
         intent = "Get Fact";
         InputStr = "";
     }
-
+    
+    //Default intent
     else
     {
-        intent = "Not recognized";
+        intent = "Not recognized";              
         InputStr = "";
     }
 
