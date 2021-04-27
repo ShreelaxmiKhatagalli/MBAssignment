@@ -33,19 +33,19 @@ string intentrecognition (string InputStr){
         {
             intent = "Get weather city";
         }
-        InputStr = "";
+        InputStr.clear();
     }
 
    else if ((tell >= 0 || say >= 0 || give >= 0 || state >= 0) && interesting >= 0 && fact >= 0 && nnot < 0 )
     {
         intent = "Get Fact";
-        InputStr = "";
+        InputStr.clear();
     }
 
     else
     {
         intent = "Not recognized";
-        InputStr = "";
+        InputStr.clear();
     }
 
     return (intent);

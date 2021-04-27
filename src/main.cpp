@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
-#include "../inc/intentRecognition.h"
+#include "../inc/intentRecognition.hpp"
 
 using namespace std;
 
@@ -22,6 +22,10 @@ int main()
         string intent = intentrecognition (question);
 
         cout << "Intent is : " << intent << endl;
+
+        intent.clear();
+        
+        question.clear();
 
     }
     
