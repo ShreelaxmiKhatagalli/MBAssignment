@@ -52,13 +52,10 @@ string intentrecognition (string InputStr){
     //Default intent
     else
     {
-<<<<<<< HEAD
+
         intent = "Not recognized";
         InputStr.clear();
-=======
-        intent = "Not recognized";              
-        InputStr = "";
->>>>>>> 97b67e11ed1ac458d94c152201f6a8fac7735085
+
     }
 
     return (intent);
